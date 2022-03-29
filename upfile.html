@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js.js/jquery.mini.js"></script>
+</head>
+
+<body>
+
+    <input type="file" id="file1">
+    <button id="buttonup">上传</button>
+
+
+    <script>
+        $('#buttonup').on('click',  function()  {
+            // 1. 将 jQuery 对象转化为 DOM 对象，并获取选中的文件列表
+            var  files  =  $('#file1')[0].files
+                // 2. 判断是否选择了文件
+            if  (files.length  <=  0)  {
+                return  alert('请选择图片后再上传！')
+            }
+        })
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js.js/template-web.js"></script>
+    <script src="js.js/jquery.mini.js"></script>
+    <!-- 1. -->
+</head>
+
+<body>
+    <div id="container">
+
+    </div>
+    <script type="text/html" id="tpl-user">
+        <h1>{{name}}-----{{age}}</h1>
+    </script>
+    <script>
+        // 2,要渲染的数据
+        var data = {
+            name: "zs",
+            age: 45
+        }
+        var y = template('tpl-user', data)
+        $('#container').html(y)
+    </script>
+</body>
+
+</html>
